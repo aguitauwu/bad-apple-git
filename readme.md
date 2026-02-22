@@ -26,11 +26,6 @@ git log --reverse --pretty=format:"%H" > ~/hashes.txt
 while read h; do clear; git --no-pager show "${h}:frame.txt" | python3 render.py; sleep 0.1; done < ~/hashes.txt
 ```
 
-## How it works
-
-Each commit modifies a single file `frame.txt` with the next frame of the video.
-The ASCII art was sourced from [Chion82/ASCII_bad_apple](https://github.com/Chion82/ASCII_bad_apple).
-
 ## License
 
 MIT — aguitauwu
